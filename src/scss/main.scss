@@ -1,4 +1,4 @@
-/*@import 'core/variables';
+/*
 @import 'core/reset';
 @import 'components/code';
 @import 'components/links';
@@ -7,7 +7,9 @@
 @import 'layout/footer';
 @import 'pages/index';
 */
+@import 'core/variables';
 @import 'core/_reset.scss';
+
 
 /* reset styles */
 
@@ -20,7 +22,7 @@
   }
   
   a {
-    color: white;
+    color: $color-bg;
     text-decoration: none;
   }
   
@@ -38,14 +40,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: black;
+    background: $color-black;
+    &__logo {
+      height: 30px;
+    }
+    &__logo--hamb {
+      height: 30px;
+    }
   }
   .hero-title {
     margin-top: 50px;
   }
-  .logo {
-    height: 30px;
-  }
+ 
   .nav{
     display: none;
   }
@@ -62,13 +68,13 @@
   }
   
   .link:hover {
-    color: #4bb84a;
+    color: $color-bottom;
   }
   
   .link-signup:before {
     padding-left: 4px;
     content: '|';
-    color: white;
+    color: $color-bg;
   }
   
   /* main */
@@ -81,8 +87,8 @@
   
   .hero {
     padding: 10px 30px 30px 30px;
-    background-color: #0691ff;
-    color: white;
+    background-color: $color-hero;
+    color: $color-bg;
     height: 55vh;
   }
   
@@ -106,7 +112,7 @@
     margin-top: 30px;
     padding: 5px 25px;
     border-radius: 50px;
-    background-color: #4bb84a;
+    background-color: $color-bottom;
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 1.5px;
@@ -162,17 +168,17 @@
     justify-content: space-between;
     align-items: flex-end;
     padding: 15px;
-    background-color: black;
+    background-color: $color-black;
   }
   
   .footer,
   .footer * {
     font-size: 10px;
-    color: #999;
+    color: $color-secondary;
   }
   
   .footer-menu-links:hover {
-    color: white;
+    color: $color-bg;
   }
   
   .footer-menu-items {
